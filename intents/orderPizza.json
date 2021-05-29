@@ -1,0 +1,215 @@
+{
+  "id": "a6e4b480-7791-480f-920b-535142242ebd",
+  "name": "orderPizza",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "orderPizza-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "b411b69c-a260-4a77-8187-1c372cb061dc",
+          "name": "email",
+          "required": true,
+          "dataType": "@sys.email",
+          "value": "$email",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Can you tell me your mail id?"
+            },
+            {
+              "lang": "en",
+              "value": "Please provide your mail id."
+            },
+            {
+              "lang": "en",
+              "value": "Please type your mail id."
+            },
+            {
+              "lang": "en",
+              "value": "May I get your mail id?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "819e782a-d308-4c1a-a050-7c33c0384cc5",
+          "name": "phone-number",
+          "required": true,
+          "dataType": "@sys.phone-number",
+          "value": "$phone-number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Can you give me your phone number?"
+            },
+            {
+              "lang": "en",
+              "value": "Please type your phone number."
+            },
+            {
+              "lang": "en",
+              "value": "Please provide your phone number."
+            },
+            {
+              "lang": "en",
+              "value": "Please type your contact number."
+            },
+            {
+              "lang": "en",
+              "value": "Please provide your contact number."
+            },
+            {
+              "lang": "en",
+              "value": "Can you give me your contact number?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "4baede6c-07f4-4e8b-b6ba-87b94e997813",
+          "name": "date-time",
+          "required": true,
+          "dataType": "@sys.date-time",
+          "value": "$date-time",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "When you need the pizza?"
+            },
+            {
+              "lang": "en",
+              "value": "At what time do you need the pizza?"
+            },
+            {
+              "lang": "en",
+              "value": "Please provide the time when you need the pizza."
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "975ce679-726f-408c-a8cb-6e058a6262c3",
+          "name": "address",
+          "required": true,
+          "dataType": "@sys.address",
+          "value": "$address",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Give me your address"
+            },
+            {
+              "lang": "en",
+              "value": "Please type your address"
+            },
+            {
+              "lang": "en",
+              "value": "Please type your delivery address"
+            },
+            {
+              "lang": "en",
+              "value": "Please provide your address"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "3e55ba1b-96b9-4d5c-a2e5-23a5a665e75e",
+          "name": "type",
+          "required": true,
+          "dataType": "@type",
+          "value": "$type",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Do you need veg or non-veg pizza?"
+            },
+            {
+              "lang": "en",
+              "value": "Veg or non-veg pizza?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "5a022a0b-5a28-41ca-8f9a-ed7777af8ba8",
+          "name": "toppings",
+          "required": true,
+          "dataType": "@toppings",
+          "value": "$toppings",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What type of topping you want?"
+            },
+            {
+              "lang": "en",
+              "value": "Please specify the topping."
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Your order is confirmed to deliver $type pizza with $toppings topping at the address  $address from the email id $email and phone number $phone-number . Will reach by the time $date-time . Do you need coke with it?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
